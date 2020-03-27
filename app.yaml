@@ -1,0 +1,17 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /assets
+  static_dir: assets
+  
+- url: /images
+  static_dir: images
+  
+- url: /.*
+  script: hello.app
+
+libraries:
+- name: jinja2
+  version: latest
